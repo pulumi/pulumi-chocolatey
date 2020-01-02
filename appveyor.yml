@@ -33,7 +33,6 @@ deploy_script:
       $licenseFileUrl = "https://raw.githubusercontent.com/pulumi/pulumi/v${version}/LICENSE"
       $licenseFileOutput = "LICENSE.txt"
       Invoke-WebRequest -Uri $licenseFileUrl -OutFile $licenseFileOutput
-      Get-Content -Path .\VERIFICATION.txt
 
       Set-Location -Path ..\
       Choco Pack 
