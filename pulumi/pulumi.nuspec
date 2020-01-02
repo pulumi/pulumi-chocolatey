@@ -3,12 +3,12 @@
   <metadata>
     <id>pulumi</id>
     <version>X.X.X</version>
-    <owners>Pulumi</owners>
-    <title>Pulumi</title>
+    <owners>Pulumibot</owners>
+    <title>Pulumi (Portable)</title>
     <authors>Pulumi</authors>
     <projectUrl>https://www.pulumi.com</projectUrl>
     <iconUrl>https://www.pulumi.com/social/pulumi.png</iconUrl>
-    <copyright>Pulumi 2016-2019</copyright>
+    <copyright>Pulumi 2016-2020</copyright>
     <tags>pulumi sdk</tags>
     <releaseNotes>https://github.com/pulumi/pulumi/blob/master/CHANGELOG.md</releaseNotes>
     <licenseUrl>https://github.com/pulumi/pulumi/blob/master/LICENSE</licenseUrl>
