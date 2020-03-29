@@ -9,3 +9,12 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage  @packageArgs
+
+$bindir = Join-Path -Path $toolsDir -ChildPath "Pulumi\bin"
+
+# create empty sidecar so shimgen ignores them.
+Get-ChildItem $bindir\*.exe | ForEach-Object { Set-Content -Value "" -Path "$_.ignore" }
+
+Install-ChocolateyPath $bindir 'Machine'
+
+Update-SessionEnvironment
