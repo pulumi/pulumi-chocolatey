@@ -1,7 +1,7 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bindir   = Join-Path -Path $toolsDir -ChildPath "Pulumi\bin"
 
-$unPath = Join-Path $toolsPath 'Uninstall-ChocolateyPath.psm1'
+$unPath = Join-Path $toolsDir 'Uninstall-ChocolateyPath.psm1'
 Import-Module $unPath
 Uninstall-ChocolateyPath $bindir 'Machine'
 
