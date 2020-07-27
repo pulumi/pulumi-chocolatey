@@ -19,7 +19,9 @@ jobs:
           $version = ${{ github.event.client_payload.ref }}
           $url = "https://get.pulumi.com/releases/sdk/pulumi-v${version}-windows-x64.zip"
           $output = "pulumi-v${version}-windows-x64.zip"
-          
+
+          Write-Output ${{ github.event.client_payload.ref }}
+
           Write-Output $url
           Write-Output $output
 
