@@ -19,6 +19,9 @@ jobs:
           $version = ${{ github.event.client_payload.ref }}
           $url = "https://get.pulumi.com/releases/sdk/pulumi-v${version}-windows-x64.zip"
           $output = "pulumi-v${version}-windows-x64.zip"
+          
+          Write-Output $url
+          Write-Output $output
 
           Set-Location -Path .\pulumi\
           (Get-Content '.\pulumi.nuspec' -Raw).Replace("<version>X.X.X</version>", "<version>${version}</version>") | Out-File '.\pulumi.nuspec'
