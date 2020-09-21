@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pulumi</id>
+    <version>X.X.X</version>
+    <owners>Pulumibot</owners>
+    <title>kube2pulumi</title>
+    <authors>Pulumi</authors>
+    <projectUrl>https://www.pulumi.com</projectUrl>
+    <iconUrl>https://www.pulumi.com/social/pulumi.png</iconUrl>
+    <copyright>Pulumi 2016-2020</copyright>
+    <tags>pulumi kube2pulumi kubernetes</tags>
+    <releaseNotes>https://github.com/pulumi/kube2pulumi/</releaseNotes>
+    <licenseUrl>https://github.com/pulumi/kube2pulumi/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <packageSourceUrl>https://github.com/pulumi/pulumi-chocolatey</packageSourceUrl>
+    <docsUrl>https://www.pulumi.com/docs/</docsUrl>
+    <projectSourceUrl>https://github.com/pulumi/kube2pulumi/</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/pulumi/kube2pulumi/issues</bugTrackerUrl>
+    <summary>Pulumi - Modern Infrastructure as Code</summary>
+    <description><![CDATA[## Upgrade your Kubernetes YAML to a modern language]]></description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

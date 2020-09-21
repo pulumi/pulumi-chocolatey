@@ -1,0 +1,44 @@
+env:
+  CHOCO_API_KEY: ${{ secrets.CHOCO_API_KEY }}
+  VERSION: ${{ github.event.client_payload.ref }}
+
+on:
+  repository_dispatch:
+    types:
+      - choco-deploy-crd2pulumi
+jobs:
+  deploy:
+    name: Deploy Chocolatey Package for crd2pulumi
+    runs-on: windows-latest
+    steps:
+      - name: Check out code into the Go module directory
+        uses: actions/checkout@v2
+      - name: Push Choco
+        shell: powershell
+        run: |
+          $version = "${{ github.event.client_payload.ref }}"
+          $url = "https://github.com/pulumi/crd2pulumi/releases/download/v" + ${version} + "crd2pulumi.exe-v" + ${version} + "-windows-amd64.zip"
+          $output = "crd2pulumi.exe-v" + ${version} + "-windows-amd64.zip"
+
+          Set-Location -Path .\crd2pulumi\
+          (Get-Content '.\crd2pulumi.nuspec' -Raw).Replace("<version>X.X.X</version>", "<version>" + ${version} + "</version>") | Out-File '.\crd2pulumi.nuspec'
+
+          Set-Location -Path .\tools
+          Invoke-WebRequest -Uri $url -OutFile $output
+          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ) | Out-File '.\chocolateyinstall.ps1'
+          $checksum = Get-FileHash -Path $output
+          $hash = $checksum.Hash
+
+          Set-Location -Path ..\legal
+          (Get-Content '.\VERIFICATION.txt') | Foreach-Object {
+              $_ -replace 'XXXXXX', "${hash}" `
+                -replace 'X.X.X', ${version}
+              } | Set-Content '.\VERIFICATION.txt'
+          $licenseFileUrl = "https://raw.githubusercontent.com/pulumi/crd2pulumi/v" + ${version} + "/LICENSE"
+          $licenseFileOutput = "LICENSE.txt"
+          Invoke-WebRequest -Uri $licenseFileUrl -OutFile $licenseFileOutput
+
+          Set-Location -Path ..\
+          Choco Pack
+
+          choco push -k $env:CHOCO_API_KEY -s https://push.chocolatey.org/
