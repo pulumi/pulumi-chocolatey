@@ -17,7 +17,7 @@ jobs:
         shell: powershell
         run: |
           $version = "${{ github.event.client_payload.ref }}"
-          $url = "https://github.com/pulumi/kube2pulumi/releases/download/v" + ${version} + "kube2pulumi.exe-v" + ${version} + "-windows-amd64.zip"
+          $url = "https://github.com/pulumi/kube2pulumi/releases/download/v" + ${version} + "/kube2pulumi.exe-v" + ${version} + "-windows-amd64.zip"
           $output = "kube2pulumi.exe-v" + ${version} + "-windows-amd64.zip"
 
           Set-Location -Path .\kube2pulumi\
