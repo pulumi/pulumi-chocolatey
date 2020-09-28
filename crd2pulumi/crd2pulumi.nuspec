@@ -18,7 +18,7 @@
     <projectSourceUrl>https://github.com/pulumi/crd2pulumi/</projectSourceUrl>
     <bugTrackerUrl>https://github.com/pulumi/crd2pulumi/issues</bugTrackerUrl>
     <summary>Pulumi - Modern Infrastructure as Code</summary>
-    <description><![CDATA[## Generate typed CustomResources from a Kubernetes CustomResourceDefinition]]></description>
+    <description><![CDATA[Generate typed CustomResources from a Kubernetes CustomResourceDefinition]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

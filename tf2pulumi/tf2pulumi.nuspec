@@ -18,7 +18,7 @@
     <projectSourceUrl>https://github.com/pulumi/tf2pulumi/</projectSourceUrl>
     <bugTrackerUrl>https://github.com/pulumi/tf2pulumi/issues</bugTrackerUrl>
     <summary>Pulumi - Modern Infrastructure as Code</summary>
-    <description><![CDATA[## A tool to convert Terraform projects to Pulumi programs]]></description>
+    <description><![CDATA[A tool to convert Terraform projects to Pulumi programs]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

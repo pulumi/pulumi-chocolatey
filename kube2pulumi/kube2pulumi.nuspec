@@ -18,7 +18,7 @@
     <projectSourceUrl>https://github.com/pulumi/kube2pulumi/</projectSourceUrl>
     <bugTrackerUrl>https://github.com/pulumi/kube2pulumi/issues</bugTrackerUrl>
     <summary>Pulumi - Modern Infrastructure as Code</summary>
-    <description><![CDATA[## Upgrade your Kubernetes YAML to a modern language]]></description>
+    <description><![CDATA[Upgrade your Kubernetes YAML to a modern language]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
