@@ -17,7 +17,7 @@ jobs:
         shell: powershell
         run: |
           $version = "${{ github.event.client_payload.ref }}"
-          $url = "https://github.com/pulumi/crd2pulumi/releases/download/v" + ${version} + "/crd2pulumi.exe-v" + ${version} + "-windows-amd64.zip"
+          $url = "https://github.com/pulumi/crd2pulumi/releases/download/v" + ${version} + "/crd2pulumi-v" + ${version} + "-windows-amd64.zip"
           $output = "crd2pulumi.exe-v" + ${version} + "-windows-amd64.zip"
 
           Set-Location -Path .\crd2pulumi\
