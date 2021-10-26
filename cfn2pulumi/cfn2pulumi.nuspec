@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>cfn2pulumi</id>
+    <version>X.X.X</version>
+    <owners>Pulumibot</owners>
+    <title>cfn2pulumi</title>
+    <authors>Pulumi</authors>
+    <projectUrl>https://www.pulumi.com</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/pulumi/pulumi/master/sdk/dotnet/pulumi_logo_64x64.png</iconUrl>
+    <copyright>Pulumi 2016-2020</copyright>
+    <tags>pulumi cfn2pulumi kubernetes</tags>
+    <releaseNotes>https://github.com/pulumi/pulumi-aws-native/</releaseNotes>
+    <licenseUrl>https://github.com/pulumi/pulumi-aws-native/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <packageSourceUrl>https://github.com/pulumi/pulumi-chocolatey</packageSourceUrl>
+    <docsUrl>https://www.pulumi.com/docs/</docsUrl>
+    <projectSourceUrl>https://github.com/pulumi/pulumi-aws-native/</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/pulumi/pulumi-aws-native/issues</bugTrackerUrl>
+    <summary>Pulumi - Modern Infrastructure as Code</summary>
+    <description><![CDATA[A tool to convert CloudFoundation Templates to Pulumi programs]]></description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
