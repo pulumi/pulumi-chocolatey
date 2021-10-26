@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>cfn2pulumi</id>
+    <id>cf2pulumi</id>
     <version>X.X.X</version>
     <owners>Pulumibot</owners>
-    <title>cfn2pulumi</title>
+    <title>cf2pulumi</title>
     <authors>Pulumi</authors>
     <projectUrl>https://www.pulumi.com</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/pulumi/pulumi/master/sdk/dotnet/pulumi_logo_64x64.png</iconUrl>
     <copyright>Pulumi 2016-2020</copyright>
-    <tags>pulumi cfn2pulumi kubernetes</tags>
+    <tags>pulumi cf2pulumi kubernetes</tags>
     <releaseNotes>https://github.com/pulumi/pulumi-aws-native/</releaseNotes>
     <licenseUrl>https://github.com/pulumi/pulumi-aws-native/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
