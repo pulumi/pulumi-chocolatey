@@ -25,9 +25,9 @@ jobs:
 
           Set-Location -Path .\tools
           Invoke-WebRequest -Uri $url -OutFile $output
-          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ).Replace("XXXXXX", "${hash}") | Out-File '.\chocolateyinstall.ps1'
           $checksum = Get-FileHash -Path $output
           $hash = $checksum.Hash
+          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ).Replace("XXXXXX", "${hash}") | Out-File '.\chocolateyinstall.ps1'
 
           Set-Location -Path ..\legal
           (Get-Content '.\VERIFICATION.txt') | Foreach-Object {
