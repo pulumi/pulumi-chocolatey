@@ -25,7 +25,7 @@ jobs:
 
           Set-Location -Path .\tools
           Invoke-WebRequest -Uri $url -OutFile $output
-          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ) | Out-File '.\chocolateyinstall.ps1'
+          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ).Replace("XXXXXX", "${hash}") | Out-File '.\chocolateyinstall.ps1'
           $checksum = Get-FileHash -Path $output
           $hash = $checksum.Hash
 

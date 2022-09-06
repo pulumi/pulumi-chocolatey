@@ -6,6 +6,8 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   unzipLocation  = $toolsDir
   file64         = "$toolsDir\pulumi-vX.X.X-windows-x64.zip"
+  checksumType   = "sha256"
+  checksum64     = "XXXXXX"
 }
 
 Install-ChocolateyZipPackage  @packageArgs
