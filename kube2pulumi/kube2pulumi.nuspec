@@ -7,7 +7,7 @@
     <title>kube2pulumi</title>
     <authors>Pulumi</authors>
     <projectUrl>https://www.pulumi.com</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/pulumi/pulumi/master/sdk/dotnet/pulumi_logo_64x64.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/pulumi/pulumi-dotnet/main/sdk/pulumi_logo_64x64.png</iconUrl>
     <copyright>Pulumi 2016-2020</copyright>
     <tags>pulumi kube2pulumi kubernetes</tags>
     <releaseNotes>https://github.com/pulumi/kube2pulumi/</releaseNotes>
