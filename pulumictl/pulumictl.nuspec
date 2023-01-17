@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>kube2pulumi</id>
+    <id>pulumictl</id>
     <version>X.X.X</version>
     <owners>Pulumibot</owners>
-    <title>kube2pulumi</title>
+    <title>Pulumi (Portable)</title>
     <authors>Pulumi</authors>
     <projectUrl>https://www.pulumi.com</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/pulumi/pulumi-dotnet/main/sdk/pulumi_logo_64x64.png</iconUrl>
     <copyright>Pulumi 2016-2023</copyright>
-    <tags>pulumi kube2pulumi kubernetes</tags>
-    <releaseNotes>https://github.com/pulumi/kube2pulumi/</releaseNotes>
-    <licenseUrl>https://github.com/pulumi/kube2pulumi/blob/master/LICENSE</licenseUrl>
+    <tags>pulumi</tags>
+    <licenseUrl>https://github.com/pulumi/pulumictl/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <packageSourceUrl>https://github.com/pulumi/pulumi-chocolatey</packageSourceUrl>
     <docsUrl>https://www.pulumi.com/docs/</docsUrl>
-    <projectSourceUrl>https://github.com/pulumi/kube2pulumi/</projectSourceUrl>
-    <bugTrackerUrl>https://github.com/pulumi/kube2pulumi/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/pulumi/pulumictl/</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/pulumi/pulumictl/issues</bugTrackerUrl>
     <summary>Pulumi - Modern Infrastructure as Code</summary>
-    <description><![CDATA[Upgrade your Kubernetes YAML to a modern language]]></description>
+    <description><![CDATA[A Swiss Army Knife for Pulumi Development]]></description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
