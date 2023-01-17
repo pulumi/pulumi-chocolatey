@@ -8,7 +8,7 @@
     <authors>Pulumi</authors>
     <projectUrl>https://www.pulumi.com</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/pulumi/pulumi-dotnet/main/sdk/pulumi_logo_64x64.png</iconUrl>
-    <copyright>Pulumi 2016-2020</copyright>
+    <copyright>Pulumi 2016-2023</copyright>
     <tags>pulumi arm2pulumi azure</tags>
     <releaseNotes>https://github.com/pulumi/pulumi-azure-native/</releaseNotes>
     <licenseUrl>https://github.com/pulumi/pulumi-azure-native/blob/master/LICENSE</licenseUrl>
