@@ -21,11 +21,11 @@ jobs:
           $output = "tf2pulumi-v" + ${version} + "-windows-x64.zip"
 
           Set-Location -Path .\tf2pulumi\
-          (Get-Content '.\tf2pulumi.nuspec' -Raw).Replace("<version>X.X.X</version>", "<version>" + ${version} + "</version>") | Out-File '.\tf2pulumi.nuspec'
+          (Get-Content '.\tf2pulumi.nuspec' -Raw).Replace("<version>X.X.X</version>", "<version>" + ${version} + "</version>") | Out-File -Encoding utf8 '.\tf2pulumi.nuspec'
 
           Set-Location -Path .\tools
           Invoke-WebRequest -Uri $url -OutFile $output
-          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ) | Out-File '.\chocolateyinstall.ps1'
+          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ) | Out-File -Encoding utf8 '.\chocolateyinstall.ps1'
           $checksum = Get-FileHash -Path $output
           $hash = $checksum.Hash
 
