@@ -21,11 +21,11 @@ jobs:
           $output = "kube2pulumi-v" + ${version} + "-windows-amd64.zip"
 
           Set-Location -Path .\kube2pulumi\
-          (Get-Content '.\kube2pulumi.nuspec' -Raw).Replace("<version>X.X.X</version>", "<version>" + ${version} + "</version>") | Out-File '.\kube2pulumi.nuspec'
+          (Get-Content '.\kube2pulumi.nuspec' -Raw).Replace("<version>X.X.X</version>", "<version>" + ${version} + "</version>") | Out-File -Encoding utf8 '.\kube2pulumi.nuspec'
 
           Set-Location -Path .\tools
           Invoke-WebRequest -Uri $url -OutFile $output
-          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ) | Out-File '.\chocolateyinstall.ps1'
+          (Get-Content '.\chocolateyinstall.ps1' -Raw).Replace("X.X.X",  ${version} ) | Out-File -Encoding utf8 '.\chocolateyinstall.ps1'
           $checksum = Get-FileHash -Path $output
           $hash = $checksum.Hash
 
